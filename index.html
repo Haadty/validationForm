@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="  https://cdn-icons-png.flaticon.com/512/1077/1077114.png">
+    <title>Validador</title>
+
+    <!--todo o sistema usa bootstrap v5.3, então daqui pra baixo são imports do mesmo-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!--import css-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--daqui pra baixo tudo usa o bootstrap-->
+
+    <!--começar o form-->
+    <form class="needs-validation" novalidate>
+        <div class="form-row">
+
+            <!--input de nome-->
+            <div class="col-md-4 mb-3">
+                <label for="nome">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Exemplo: Rogerio Almar Danw"
+                    minlength="1" maxlength="40" required>
+                <div class="invalid-feedback">
+                    Prencha esse campo corretamente!
+                </div>
+            </div>
+
+            <!--input de email-->
+            <div class="col-md-4 mb-3">
+                <label for="email">Gmail</label>
+                <input type="email" class="form-control" id="gmail" placeholder="Exemplo: newVirir@gmail.com"
+                    minlength="1" maxlength="60"
+                    pattern="(?![_.-])((?![_.-][_.-])[a-zA-Z\d_.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
+                    required>
+                <div class="invalid-feedback">
+                    Prencha esse campo corretamente!
+                </div>
+            </div>
+
+            <!--input de cpf-->
+            <div class="col-md-4 mb-3">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="Exemplo: xxx.xxx.xxx-xx" minlength="14"
+                    maxlength="14" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+                    required>
+                <div class="invalid-feedback" id="invalid-cpf">
+                    Prencha esse campo corretamente!
+                </div>
+            </div>
+
+            <!--input de email-->
+            <div class="col-md-4 mb-3">
+                <label for="telefone">Telefone</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">+55</span>
+                    <input type="text" class="form-control" id="telefone" placeholder="Exemplo: (xx) xxxxx-xxxx"
+                        minlength="15" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}" required>
+                    <div class="invalid-feedback">
+                        Prencha esse campo corretamente!
+                    </div>
+                </div>
+            </div>
+
+            <!--daqui pra baixo o botão de login e o alerta-->
+        </div>
+        <button class="btn btn-primary" type="submit" id="button">Login</button>
+    </form>
+    <div role="alert" id="alert" style="top: 10px;"></div>
+</body>
+
+<!--scripts-->
+<script src="js/ultis.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/start.js"></script>
+
+</html>
