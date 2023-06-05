@@ -32,7 +32,7 @@
             <div class="col-md-4 mb-3">
                 <label for="nome">Nome Completo</label>
                 <input type="text" class="form-control" id="nome" placeholder="Exemplo: Rogerio Almar Danw"
-                    minlength="1" maxlength="40" required>
+                    minlength="1" maxlength="40" required data-getInput>
                 <div class="invalid-feedback">
                     Prencha esse campo corretamente!
                 </div>
@@ -44,7 +44,7 @@
                 <input type="email" class="form-control" id="gmail" placeholder="Exemplo: newVirir@gmail.com"
                     minlength="1" maxlength="60"
                     pattern="(?![_.-])((?![_.-][_.-])[a-zA-Z\d_.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
-                    required>
+                    required data-getInput>
                 <div class="invalid-feedback">
                     Prencha esse campo corretamente!
                 </div>
@@ -55,7 +55,7 @@
                 <label for="cpf">CPF</label>
                 <input type="text" class="form-control" id="cpf" placeholder="Exemplo: xxx.xxx.xxx-xx" minlength="14"
                     maxlength="14" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
-                    required>
+                    required data-getInput>
                 <div class="invalid-feedback" id="invalid-cpf">
                     Prencha esse campo corretamente!
                 </div>
@@ -67,7 +67,7 @@
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">+55</span>
                     <input type="text" class="form-control" id="telefone" placeholder="Exemplo: (xx) xxxxx-xxxx"
-                        minlength="15" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}" required>
+                        minlength="15" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}" required data-getInput>
                     <div class="invalid-feedback">
                         Prencha esse campo corretamente!
                     </div>

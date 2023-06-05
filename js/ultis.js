@@ -83,10 +83,11 @@ const maskCpf = (valor) => {
 //daqui pra baixo funçoes de checar inputs
 //checar um input especifico do form
 function checkSpecificInput(n) {
-  if (document.getElementById(n).className != "form-control") {
-    if (document.getElementById(n).checkValidity())
-      document.getElementById(n).className = "form-control is-valid";
-    else document.getElementById(n).className = "form-control is-invalid";
+  if (n.className != "form-control") {
+    if (n.checkValidity()) n.className = "form-control is-valid";
+    else n.className = "form-control is-invalid";
+    if (n.id == "cpf" && !Cpfvalidate())
+      n.className = "form-control is-invalid";
   }
 }
 
